@@ -1,4 +1,9 @@
-function Character({ character, characterFavourites, updateFavourites }) {
+import React, { useContext } from 'react';
+import { FavouritesContext } from '../App';
+
+function Character({ character, updateFavourites }) {
+  
+  const characterFavourites = useContext(FavouritesContext);
 
   let imageSrc = "http://picsum.photos/300/200/?blur";
   if (character.imageUrl) {
