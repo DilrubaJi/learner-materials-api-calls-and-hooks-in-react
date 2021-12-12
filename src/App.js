@@ -18,8 +18,8 @@ function App() {
   };
 
   useEffect(() => {
-    getCharacters(1);
-  }, []);
+    getCharacters(currentPage);
+  }, [currentPage]);
 
   return (
     <div className="page">
